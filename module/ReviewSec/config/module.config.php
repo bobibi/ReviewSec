@@ -77,6 +77,7 @@ return array(
         'exception_template' => 'error/index',
         'template_map' => array(
             'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
+            'layout/jsonp' => __DIR__ . '/../view/layout/jsonp.phtml',
             'reviewsec/web/index' => __DIR__ . '/../view/review-sec/web/index.phtml',
             'reviewsec/admin/index' => __DIR__ . '/../view/review-sec/admin/index.phtml',
             'error/404' => __DIR__ . '/../view/error/404.phtml',
