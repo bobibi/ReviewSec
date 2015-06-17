@@ -29,7 +29,7 @@ class WebController extends AbstractActionController {
     	return $viewModel;
     }
     
-    public function reviewsec-webembeddedAction() {
+    public function reviewsecwebembeddedAction() {
     	$this->_helper->layout->setLayout('jsonp');
     	return new ViewModel();
     }
