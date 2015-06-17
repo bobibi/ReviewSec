@@ -30,7 +30,7 @@ class WebController extends AbstractActionController {
     }
     
     public function reviewsecwebembeddedAction() {
-    	$this->_helper->layout->setLayout('jsonp');
+    	$this->layout()->setTemplate('jsonp');
     	return new ViewModel();
     }
     public function trackingAction() {
