@@ -76,6 +76,7 @@ class WebController extends AbstractActionController {
                     $results = $productDetector->getResults();
                 } catch (\Exception $e) {
                     $errorMessage = $e->getMessage();
+                    throw $e;
                 }
             }
         }
