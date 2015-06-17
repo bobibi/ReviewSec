@@ -37,7 +37,7 @@
   <section id="install">
     <span>Install the web embedded </span><a class="button plain" onclick="alert('Drag and drop the install link to your browser bookmark'); return false;"
 	href="javascript:document.getElementsByTagName('body')[0].appendChild(document.createElement('script')).setAttribute('src','<?php 
-	echo $this->url('home', array(), array('force_canonical' => true))."js/reviewsec-webembedded.js"
+	echo $this->url('home', array(), array('force_canonical' => true))."web/reviewsecwebembedded"
 	?>');"><span class="blue">ReviewSec tool</span><img src="<?php echo $this->basePath() . '/img/install.png'?>" height="30px"></a>
     <a href="#" id="how-to">HOW TO ...</a>
     <div id="how-to-detail">
