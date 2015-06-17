@@ -1,0 +1,129 @@
+
+#revsec-main {
+	position: fixed;
+	z-index: 18538;
+	top: 15px;
+	right: 15px;
+	border: 5px solid #ADADAD;
+	border-radius: 5px;
+	margin: 0;
+	padding: 5px;
+	width: 300px;
+	background: #f7f7f7;
+	color: #666;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#revsec-close-button-div {
+	position: fixed;
+	z-index: 18539;
+}
+
+#revsec-close-button {
+	position: fixed;
+	top: 7px;
+	right: 300px;
+	cursor: pointer;
+}
+
+#revsec-header {
+	background: #ddd;
+	height: 40px;
+	margin: -5px;
+	border-bottom: double 4px #111;
+	text-transform:uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 24px;
+}
+
+#revsec-header img {
+	vertical-align: middle;
+}
+
+#revsec-result {
+	padding: 10px;
+	display: block;
+}
+
+#revsec-result img {
+	width: 70px;
+	height: 70px;
+	border: 0;
+	border-radius: 90px;
+	background: #fff;
+	-moz-border-radius: 90px; /* Old Firefox */
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#revsec-confidence {
+	width: 170px;
+	margin: 0 auto;
+	border-bottom: 1px solid #222;
+	border-top: 1px solid #222;
+	color: #222;
+}
+
+#revsec-loading {
+	display: block;
+	font-size: 14px;
+	text-align: center;
+}
+
+#revsec-loading-spinner {
+	margin: 30px 0 10px -5px;
+}
+
+#feature-list {
+	margin-top: 20px;
+	width: 100%;
+	font-family: Georgia, Times, serif;
+	font-size: 15px;
+}
+
+#feature-list ul {
+	list-style: none;
+}
+
+#feature-list ul li {
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	background-color: #FFFFFF;
+	line-height: 30px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+#feature-list ul li:hover {
+	color: #FFFFFF;
+	background: grey;
+}
+
+#feature-list ul li {
+	margin-right: 10px;
+}
+
+#revsec-unsupported {
+	display: none;
+}
+
+#revsec-result {
+	display: none;
+}
+
+.revsec-left {
+	text-align: left;
+}
+
+.revsec-center {
+	 text-align: center;
+}
+
+

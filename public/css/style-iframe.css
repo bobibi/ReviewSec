@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+/* MAIN ––––––––––––––––––––– */
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #222;
+	font-size: 16px;	
+	width: 1000px;
+	margin: 0 auto;
+	padding: 30px 20px;
+	background: #eee;
+}
+
+.box-head {
+	margin-bottom: 0;
+	padding: 5px 20px;
+}
+
+.box-body {
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #fff;
+	padding: 5px 20px;
+}
+p {
+	text-align: justify;
+}

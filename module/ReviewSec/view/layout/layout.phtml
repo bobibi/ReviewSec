@@ -1,0 +1,88 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Review Sec</title>
+    <!-- Le styles -->
+    <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+    				->prependStylesheet($this->basePath() . '/css/style-phtml.css')
+//                     ->prependStylesheet($this->basePath() . '/css/style.css')
+//                     ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
+//                     ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') 
+    ?>
+    <!-- Scripts -->
+    <?php echo $this->headScript()
+                    ->prependFile($this->basePath() . '/js/reviewsec.js')
+                    ->prependFile("https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")                    
+//             ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+//             ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+    ?>
+    </head>
+<body>
+<div class="container">
+  <header>
+    <div id="logo">
+      <a href="<?php echo $this->url('home') ?>" class="plain">
+        <img src="<?php echo $this->basePath() . '/img/review-sec.png'?>" class="2x" height="100" alt="ReviewSec Logo">
+        <h1>Review Sec</h1>
+      </a>      
+    </div>    
+  </header>  
+  <?php echo $this->content; ?>
+  
+  <section>
+    <p class="center">ReviewSec development is in progress. We will be ready soon.</p>
+  </section>
+  <section id="install">
+    <span>Install the web embedded </span><a class="button plain" onclick="alert('Drag and drop the install link to your browser bookmark'); return false;"
+	href="javascript:document.getElementsByTagName('body')[0].appendChild(document.createElement('script')).setAttribute('src','<?php 
+	echo $this->url('home', array(), array('force_canonical' => true))."js/reviewsec-webembedded.js"
+	?>');"><span class="blue">ReviewSec tool</span><img src="<?php echo $this->basePath() . '/img/install.png'?>" height="30px"></a>
+    <a href="#" id="how-to">HOW TO ...</a>
+    <div id="how-to-detail">
+      	<span>(1) Drag the ReviewSec tool and drop it into your browser bookmark:</span>
+    	<img alt="step1" class="step" src="<?php echo $this->basePath() . '/img/how-to-1.png'?>"><br>
+    	<span>(2) Open a product page, and click the tool:</span>
+    	<img alt="step2" class="step" src="<?php echo $this->basePath() . '/img/how-to-2.png'?>"><br>
+    	<span>(3) The analysis result will display over the product page:</span>
+    	<img alt="step3" class="step" src="<?php echo $this->basePath() . '/img/how-to-3.png'?>"><br>
+    </div>
+  </section><!-- END #install -->
+  <a name="content"></a>
+  <nav>
+    <ul>
+      <li><a href="/web/todo" target="static-content" class="plain">
+        <h3>People</h3>
+        <p>Read about the develop team.</p>
+      </a></li>
+      <li><a href="/web/about" target="static-content" class="plain">
+        <h3>About</h3>
+        <p>Learn about Review Sec project.</p>
+      </a></li>
+      <li><a href="/web/todo" target="static-content" class="plain">
+        <h3>FAQ</h3>
+        <p>Find the answer to your question.</p>
+      </a></li>
+      <li><a href="/web/todo" target="static-content" class="plain">
+        <h3>Contact Us</h3>
+        <p>You have fantasy ideas.</p>
+      </a></li>
+    </ul>
+  </nav>
+</div>
+  <iframe id="static-content" name="static-content"></iframe>
+  <div class="container"><footer><small>Copyright &copy; 2015 ReviewSec</small></footer></div>
+  <?php echo $this->inlineScript() ?>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60692656-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</body>
+</html>

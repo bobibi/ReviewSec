@@ -1,0 +1,58 @@
+<section id="query-form">
+   <?php
+     $form->setAttribute('action', '/web/query');
+     $form->prepare();        
+     echo $this->form()->openTag($form);
+     
+     $productLink = $form->get('ProductLink');
+     $productLink->setAttribute('placeholder', 'Paste the product link here');
+     echo $this->formInput($productLink);
+     
+     $submitButton = $form->get('submit');
+     $submitButton->setAttribute("value", "SEC");
+     echo $this->formSubmit($submitButton);
+     
+     echo $this->formHidden($form->get('Site'));
+     echo $this->formHidden($form->get('ProductID'));
+     
+     echo $this->form()->closeTag();
+  ?>
+</section><!-- END #query-form -->
+
+<?php if(!is_null($errorMessage)):?>
+<section id="error">
+<p>There's something wrong: <?php echo $errorMessage?></p>
+</section>
+<?php endif;?>
+
+<?php if(!is_null($results) && !is_null($product)):?>
+<section id="report" class="float-wrapper">
+    <div id="summary">
+      <p>More and more people are relying on online reviews
+			when evaluating the quality of products, hotels, restaurants, and
+			even vacation packages. The online
+			review systems, also referred to as online reputation systems, allow
+			users to post reviews for products/services, and aggregate these
+			reviews to assign each product/service with a reputation score that
+			indicates the quality (e.g. number of stars in Amazon).</p>
+    </div>
+    <div id="evaluation">
+      <?php if($results[0]['malicious']):?>
+      <img id="suspicious" alt="Suspicious" src="<?php echo $this->basePath() . '/img/question.png'?>">
+      <?php else:?>
+      <img id="suspicious" alt="Good" src="<?php echo $this->basePath() . '/img/check.png'?>">
+      <?php endif;?>
+      <div id="confidence"><?php echo $results[0]['confidence']?></div>
+    </div>
+    <div id="product">
+      <a href="<?php echo $product->URL?>" target="_blank"><img src="<?php echo $product->ImageURL?>" width="200px"></a>
+      <ul>
+        <li><?php echo $product->Category?></li>
+        <li><a href="<?php echo $product->URL?>" target="_blank" class="plain"><?php echo $product->Name?></a></li>
+        <li>$<?php echo $product->Price?></li>
+        <li><?php echo $product->AverageRating?> star</li>
+      </ul>
+    </div>
+  </section>
+  <!-- END #report -->
+<?php endif;?>

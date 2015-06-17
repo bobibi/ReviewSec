@@ -1,0 +1,17 @@
+{
+    "name": "nest/reviewsec",
+    "description": "ReviewSec application developed by NEST lab",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "framework",
+        "zf2"
+    ],
+    "homepage": "http://egr.uri.edu/nestlab/",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*",
+        "zendframework/zftool": "dev-master",
+        "zendframework/zend-developer-tools": "dev-master",
+        "bjyoungblood/bjy-profiler": "dev-master"
+    }
+}

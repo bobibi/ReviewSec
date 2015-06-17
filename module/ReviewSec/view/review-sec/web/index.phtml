@@ -1,0 +1,20 @@
+<section id="query-form">
+   <?php
+     $form->setAttribute('action', '/web/query');
+     $form->prepare();        
+     echo $this->form()->openTag($form);
+     
+     $productLink = $form->get('ProductLink');
+     $productLink->setAttribute('placeholder', 'Paste the product link here');
+     echo $this->formInput($productLink);
+     
+     $submitButton = $form->get('submit');
+     $submitButton->setAttribute("value", "SEC");
+     echo $this->formSubmit($submitButton);
+     
+     echo $this->formHidden($form->get('Site'));
+     echo $this->formHidden($form->get('ProductID'));
+     
+     echo $this->form()->closeTag();
+  ?>
+</section><!-- END #query-form -->
