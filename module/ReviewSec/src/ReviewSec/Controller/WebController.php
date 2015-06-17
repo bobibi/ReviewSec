@@ -17,16 +17,21 @@ use ReviewSec\Model\Helper\AmazonProduct as AmazonProductHelper;
 use ReviewSec\Model\Helper\AmazonDetector;
 
 class WebController extends AbstractActionController {
-	public function indexAction() {
-		$form = new QueryForm ();
-		return new ViewModel(array(
-            'form' => $form,
+    public function indexAction() {
+	$form = new QueryForm ();
+	return new ViewModel(array(
+        	'form' => $form,
         ));
     }
     public function todoAction() {
     	$viewModel = new ViewModel();
     	$viewModel->setTerminal(true);
     	return $viewModel;
+    }
+    
+    public function reviewsec-webembeddedAction() {
+    	$this->_helper->layout->setLayout('jsonp');
+    	return new ViewModel();
     }
     public function trackingAction() {
     	$viewModel = new ViewModel();
